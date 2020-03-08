@@ -1,5 +1,4 @@
 FROM krallin/ubuntu-tini:xenial
-MAINTAINER Ross Allan <docker@nallar.me>
 
 ENV LANG=C.UTF-8 \
 TZ=Europe/London \
