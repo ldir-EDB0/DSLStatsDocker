@@ -14,6 +14,9 @@ Xvfb $DISPLAY -screen 0 1600x900x24 &
 PID=$!
 sleep 5
 
+tinywm $DISPLAY &
+PID4=$!
+
 x11vnc -forever -usepw -display $DISPLAY -shared &
 PID2=$!
 sleep 5
@@ -34,3 +37,4 @@ cd /root/dslstats
 wait $PID
 wait $PID2
 wait $PID3
+wait $PID4
