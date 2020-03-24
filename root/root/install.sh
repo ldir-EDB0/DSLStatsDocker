@@ -1,8 +1,8 @@
 #!/bin/sh
 set -e
 
-apt-get update && apt-get install -y --force-yes --no-install-recommends \
-    supervisor xinetd x11vnc xvfb tinywm openbox xdotool wmctrl x11-utils xterm libgtk2.0-0 wget curl \
+apt-get update && apt-get install -y --no-install-recommends \
+    supervisor xinetd x11vnc xvfb tinywm openbox xdotool wmctrl x11-utils xterm libgtk2.0-0 wget curl libssl-dev \
     && apt-get autoclean && apt-get autoremove && rm -rf /var/lib/apt/lists/*
 
 cd /root/
